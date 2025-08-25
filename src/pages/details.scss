@@ -1,0 +1,89 @@
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+
+    .infos {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+
+        .infosLeft {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            .infoTxt {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                h1 {
+                    color: #FF6060;
+                    font-weight: 500;
+                    font-size: 36px;
+                    margin: 0;
+                }
+                p {
+                    font-weight: 500;
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+
+            .infoTags {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+
+                .tag {
+                    height: 25px;
+                    padding: 0 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #FFFFFF;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    background-color: #FF6060;
+                    text-align: center;
+                }
+            }
+
+
+
+    }
+        .infosRight {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            max-width: 200px;
+            height: 68px;
+
+            .host-name {
+                display: flex;
+                flex-wrap: wrap;
+                font-weight: 500;
+                font-size: 18px;
+                color: #FF6060;
+            }
+
+            .host-picture {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+
+    .img img {
+        width: 100%;
+        max-width: 1240px;
+        height: auto;
+        max-height: 415px;
+        border-radius: 25px;
+    }
+}
