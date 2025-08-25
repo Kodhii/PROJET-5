@@ -55,7 +55,13 @@
 
 
     }
-        .infosRight {
+
+        .infosRatingRight {
+            display: flex;
+            flex-direction: column;
+            
+            
+            .infosRight {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -76,7 +82,22 @@
                 border-radius: 50%;
             }
         }
+        }
+        
     }
+
+    .infosCollapse {
+        display: flex;
+        max-width: 1240px;
+        width: 100%;
+        justify-content: space-between;
+
+        .collapse {
+            max-width: 582px;
+            width: 100%;
+        }
+    }
+    
 
 
     .img img {

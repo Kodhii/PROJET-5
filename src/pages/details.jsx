@@ -1,6 +1,8 @@
 import { useParams, Navigate  } from "react-router-dom";
 import data from "../data/listing.json";
 import "./details.scss";
+import Rating from "../components/rating";
+import Collapse from "../components/collapse";
 
 export default function Details() {
   const { id } = useParams();
@@ -27,10 +29,20 @@ export default function Details() {
         ))}
           </div>
         </div>
-        <div className="infosRight">
-          <p className="host-name">{logement.host.name}</p>
-          <img className="host-picture" src={logement.host.picture} alt={logement.host.name} /> 
+        <div className="infosRatingRight">
+          <div className="infosRight">
+            <p className="host-name">{logement.host.name}</p>
+            <img className="host-picture" src={logement.host.picture} alt={logement.host.name} /> 
+          </div>
+          <div className="rating">
+            <Rating value={logement.rating} />
+          </div>
+          
         </div>
+      </div>
+      <div className="infosCollapse">
+        <Collapse title="Description" content={logement.description} />
+        <Collapse title="Équipements" contentList={logement.equipments} />
       </div>
     </div>
   );
