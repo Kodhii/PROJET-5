@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./collapse.scss";
 
-export default function Collapse({ title, content, contentList  }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Collapse({ title, content, contentList }) {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <div className={`collapse ${isOpen ? "open" : ""}`}>
@@ -12,15 +12,15 @@ export default function Collapse({ title, content, contentList  }) {
             </div>
             <div className="collapse-content">
 
-            {content && <p>{content}</p>}
+                {content && <p>{content}</p>}
 
-            {contentList && (
-            <ul>
-                {contentList.map((item, index) => (
-                <li key={index}>{item}</li>
-                ))}
-            </ul>
-            )}
+                {contentList && (
+                    <ul>
+                        {contentList.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
     );

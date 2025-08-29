@@ -1,8 +1,9 @@
-import { useParams, Navigate  } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import data from "../data/listing.json";
 import "./details.scss";
 import Rating from "../components/rating";
 import Collapse from "../components/collapse";
+import Carousel from "../components/carousel";
 
 export default function Details() {
   const { id } = useParams();
@@ -15,7 +16,7 @@ export default function Details() {
   return (
     <div className="details">
       <div className="img">
-        <img src={logement.cover} alt={logement.title} />
+        <Carousel pictures={logement.pictures} />
       </div>
       <div className="infos">
         <div className="infosLeft">
@@ -25,19 +26,19 @@ export default function Details() {
           </div>
           <div className="infoTags">
             {logement.tags.map((tag, index) => (
-            <span key={index} className="tag">{tag}</span>
-        ))}
+              <span key={index} className="tag">{tag}</span>
+            ))}
           </div>
         </div>
         <div className="infosRatingRight">
           <div className="infosRight">
             <p className="host-name">{logement.host.name}</p>
-            <img className="host-picture" src={logement.host.picture} alt={logement.host.name} /> 
+            <img className="host-picture" src={logement.host.picture} alt={logement.host.name} />
           </div>
           <div className="rating">
             <Rating value={logement.rating} />
           </div>
-          
+
         </div>
       </div>
       <div className="infosCollapse">

@@ -1,21 +1,21 @@
 .card {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 1rem;
-    overflow: hidden;
-    border-radius: 8px;
-    cursor: pointer;
-}
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
 
-.card-img {
+  .card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-}
+  }
 
-.card-title {
+  .card-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -25,8 +25,18 @@
     color: white;
     box-sizing: border-box;
 
-  h3 {
-    margin: 0;
-    font-size: 1rem;
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    max-width: 700px;
+    width: 100%;
+    height: 255px;
+    margin: 0.7rem 1rem;
   }
 }

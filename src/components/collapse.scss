@@ -3,10 +3,10 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-}
 
-.AboutCollapse {
-  max-width: 1030px;
+  .AboutCollapse {
+    max-width: 1030px;
+  }
 }
 
 .collapse {
@@ -24,7 +24,8 @@
     height: 52px;
     cursor: pointer;
     padding: 0 1rem;
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 18px;
     background: #ff6060;
     color: white;
     border-bottom-left-radius: 8px;
@@ -53,19 +54,30 @@
     transition: max-height 0.3s ease, padding 0.3s ease;
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+
     ul {
       list-style: none;
-      margin: 0;
+      margin: 1rem 0;
       padding: 0;
 
-    li {
-      margin-bottom: 0.4rem;
+      li {
+        margin-bottom: 0.4rem;
+      }
     }
-  }
   }
 
   &.open .collapse-content {
     max-height: 1000px;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .collapse {
+    margin: 0.5rem 0;
+    .collapse-title {
+      height: 30px;
+      font-size: 13px;
+    }
   }
 }

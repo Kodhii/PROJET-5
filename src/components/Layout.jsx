@@ -14,20 +14,20 @@ export default function Layout() {
           <br />
           <div className="links">
 
-            <NavLink 
-                to="/" 
-                end
-                className={({ isActive }) => isActive ? "active-link" : ""}
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => isActive ? "active-link" : ""}
             >
-                Accueil
+              Accueil
             </NavLink>{" "}
 
-            <NavLink 
-                to="/about"
-                className={({ isActive }) => isActive ? "active-link" : ""}
+            <NavLink
+              to="/about"
+              className={({ isActive }) => isActive ? "active-link" : ""}
             >
-                À propos
-            </NavLink> 
+              À propos
+            </NavLink>
 
           </div>
         </nav>

@@ -2,6 +2,7 @@
   display: flex;
   justify-content: flex-end;
   gap: 8px;
+
   .star {
     font-size: 30px;
     color: #e3e3e3;
@@ -10,5 +11,14 @@
 
   .star.filled {
     color: #ff6060;
+  }
+}
+
+@media (max-width: 700px) {
+  .rating {
+    gap: 2px;
+    .star {
+      font-size: 25px;
+    }
   }
 }
