@@ -12,6 +12,5 @@ export default function Error() {
       </Link>
     </div>
     </div>
-
   )
 }
